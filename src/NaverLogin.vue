@@ -1,6 +1,6 @@
 <template>
   <div id="naverIdLogin"></div>
-  
+
 </template>
 <script>
 const defaultErrorMessage = '현재 네이버 로그인 서비스를 이용할 수 없습니다. 잠시 후 다시 시도해주세요.'
@@ -67,14 +67,15 @@ export default {
   data () {
     return {
       isLoggedIn: false,
-      naverLogin: new naver.LoginWithNaverId({
-        clientId: this.clientId,
-        callbackUrl: this.callbackUrl,
-        isPopup: this.isPopup,
-        loginButton: { color: this.buttonColor, type: this.buttonType, height: this.buttonHeight },
-        callbackHandle: true
-      }),
+      naverLogin: null,
       initiate: (comp) => {
+        this.naverLogin = new naver.LoginWithNaverId({
+          clientId: comp.clientId,
+          callbackUrl: comp.callbackUrl,
+          isPopup: comp.isPopup,
+          loginButton: { color: comp.buttonColor, type: comp.buttonType, height: comp.buttonHeight },
+          callbackHandle: true
+        })
         this.naverLogin =
           this.naverLogin.init()
         window.addEventListener('load', function () {

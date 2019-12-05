@@ -27,12 +27,12 @@ export default {
       default: 'green'
     },
     buttonType: {
-      type: String,
-      default: "3"
+      type: Number,
+      default: 3
     },
     buttonHeight: {
-      type: String,
-      default: "60"
+      type: Number,
+      default: 60
     },
     scriptUrl: {
       type: String,
@@ -73,7 +73,7 @@ export default {
           clientId: comp.clientId,
           callbackUrl: comp.callbackUrl,
           isPopup: comp.isPopup,
-          loginButton: { color: comp.buttonColor, type: comp.buttonType.toInt(), height: comp.buttonHeight.toInt() },
+          loginButton: { color: comp.buttonColor, type: comp.buttonType, height: comp.buttonHeight },
           callbackHandle: true
         })
         this.naverLogin =

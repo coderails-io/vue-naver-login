@@ -73,7 +73,7 @@ export default {
           clientId: comp.clientId,
           callbackUrl: comp.callbackUrl,
           isPopup: comp.isPopup,
-          loginButton: { color: comp.buttonColor, type: comp.buttonType, height: comp.buttonHeight },
+          loginButton: { color: 'green', type: 1, height: 60 },
           callbackHandle: true
         })
         this.naverLogin =

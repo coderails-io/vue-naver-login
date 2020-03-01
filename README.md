@@ -1,4 +1,4 @@
-# vue-kakao-login
+# vue-naver-login
 
 VueJS 컴포넌트로 만든 네이버 로그인 서비스입니다.
 
